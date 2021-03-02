@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+#root {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: .3s ease-in-out;
+}
+
+a:hover {
+    color: #ff8000;
+}
+
+h1 {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+}
+
+h2 {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+h3 {
+    padding: 1rem 0;
+}
+
+h4 {
+    padding: 0 1.2rem;
+}
+
+li {
+    padding: .4rem 0;
+    list-style: none;
+}
+
+textarea, input, select, button {
+    padding: .6rem;
+    border-radius: .3rem;
+    border: .1rem solid #a4a4a4;
+    font-family: Tahoma, Arial, sans-serif;
+    outline: none;
+}
+
+input[type="range"] {
+    padding: 1.2rem 0;
+}
+
+button {
+    background: #f8f8f8;
+    cursor: pointer;
+}
+
+textarea:hover, input:hover, select:hover, button:hover {
+    border: .1rem solid #404040;
+}
+
+button.primary {
+    background: #f0c040;
+}
+
+button.block {
+    width: 100%;
+}
+
+button.small {
+    padding: .3rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4.2rem 1fr 4.2rem;
+    height: 100%;
+}
+
+header {
+    background: #203040;
+}
+
+.badge {
+    background-color: #f02020;
+    color: #fff;
+    border-radius: 50%;
+    padding: .1rem .4rem;
+    font-size: 1rem;
+    margin-left: 0.3rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row.top {
+    align-items: flex-start;
+}
+
+.row.start {
+    justify-content: flex-start;
+}
+
+.col-1 {
+    flex: 1 1 20rem;
+}
+
+.col-2 {
+    flex: 2 1 40rem;
+}
+
+.col-3 {
+    flex: 32 1 60rem;
+}
+
+.min-30 {
+    min-width: 20rem;
+}
+
+.p-1 {
+    padding: .7rem;
+}
+
+.center {
+    justify-content: center;
+}
+
+header a {
+    padding: 0 .5rem;
+    color: #fff;
+}
+
+header a.brand {
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+header a.brand:hover {
+    color: #fff;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background: #203040;
+    color: #fff;
+}
+
+img {
+    border-radius: .5rem;
+}
+
+img.small {
+    max-width: 5rem;
+    width: 100%;
+}
+
+img.medium {
+    max-width: 20rem;
+    width: 100%;
+}
+
+img.large {
+    width: 100%;
+}
+
+.card {
+    border: .1rem solid #c0c0c0;
+    background: #f8f8f8;
+    border-radius: .5rem;
+    margin: 1rem;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-body * {
+    margin-bottom: .5rem;
+}
+
+.card-body span {
+    font-size: 1rem;
+}
+
+.rating i {
+    color: #f0c040;
+    margin: .1rem;
+}
+
+.success {
+    color: #20a020;
+}
+
+.danger {
+    color: #a02020;
+}
+
+.alert {
+    padding: 1rem;
+    border: .1rem solid transparent;
+    border-radius: .5rem;
+}
+
+.alert-info {
+    color: #2020a0;
+    background-color: #e0e0ff;
+}
+
+.alert-danger {
+    color: #a02020;
+    background-color: #ffe0e0e0;
+}
+
+.alert-success {
+    color: #20a020;
+    background-color: #eeffe0;
+}
+
+.large-Loading {
+    font-size: 7rem;
+}
+
+.small-Loading {
+    font-size: 2rem;
+}
+
+.form {
+    max-width: 55rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.form>div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.form>div div {
+    margin: 1rem 0;
+}
+
+.form>div div input[type="radio"] {
+    margin-right: .5rem;
+}
+
+.form label {
+    margin: 1rem 0;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    visibility: hidden;
+    right: 0;
+    min-width: 9rem;
+    padding: 1rem;
+    z-index: 1;
+    background-color: #203040;
+    margin: 0;
+    margin-top: .2rem;
+    border-radius: .5rem;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.checkout-steps {
+    margin: .5rem;
+}
+
+.checkout-steps>div {
+    border-top: .2rem solid #c0c0c0;
+    color: #c0c0c0;
+    flex: 1;
+    padding: 1rem;
+}
+
+.checkout-steps>div.active {
+    border-top-color: #ff8000;
+    color: #ff8000;
+}
+
+.active {
+    border-top-color: #ff8000;
+    color: #ff8000;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5rem
+}
+
+.table tr:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+
+.table td, .table th {
+    text-align: left;
+    border: .1rem solid #e4e4e4;
+    padding: .5rem;
+}
+
+.table tbody button {
+    margin: 0 .2rem;
+}
+
+.carousel .slide img {
+    max-width: 20rem;
+}
+
+.search button {
+    border-radius: 0 0.5rem 0.5rem 0;
+    border-right: none;
+    margin-right: 0.5rem;
+}
+
+.search input {
+    border-radius: 0.5rem 0 0 0.5rem;
+    border-right: none;
+    margin-left: 0.5rem;
+}
+
+aside {
+    position: fixed;
+    width: 20rem;
+    height: 100%;
+    background-color: #efefef;
+    z-index: 1000;
+    transform: translateX(-30rem);
+    transition: all 0.5s;
+}
+
+aside.open {
+    transform: translateX(0);
+}
+
+button.open-sidebar {
+    font-size: 1.7rem;
+    padding: 0.2rem 0.5rem;
+    margin: 0 0.5rem;
+    background: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button.open-sidebar:hover {
+    border-color: #ffffff;
+}
+
+aside ul {
+    padding: 0;
+    list-style: none;
+}
+
+aside li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+button.close-sidebar {
+    padding: 0.3rem 0.8rem;
+}
+
+.pad-lef {
+    padding: 1.1rem;
+}
+
+.range li {
+    padding: 0;
+}
+
+.full-container {
+    margin: 0;
+    height: calc(100% + .2rem);
+}
+
+.map-input-box {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0.5rem auto;
+    width: 15rem;
+    height: 3rem;
+    display: flex;
+    outline: none;
+}
+
+.map-input-box input {
+    border-radius: 1rem 0 0 1rem;
+    border-right: 0;
+}
+
+.map-input-box button {
+    border-radius: 0 1rem 1rem 0;
+    border-left: 0;
+}
+
+.pagination a {
+    padding: .8rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem #a4a4a4 solid;
+    font-size: 1.2rem;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pagination a.active {
+    font-weight: bold;
+}
