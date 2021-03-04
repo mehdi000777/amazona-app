@@ -5,8 +5,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd store-app && npm install && npm run build",
-    "heroku-postbuild": "cd store-app && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "author": "",
@@ -23,9 +21,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  },
-  "engines": {
-    "node": "14.15.1",
-    "npm": "6.14.8"
   }
 }
