@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cd store-app && npm install && npm run build",
+    "heroku-postbuild": "cd store-app && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "author": "",
