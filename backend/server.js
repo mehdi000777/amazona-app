@@ -18,6 +18,22 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/amazona", {
     useCreateIndex: true
 });
 
+const whitelist = ['http://localhost:3000'​, 'http://localhost:8080'​, 'https://shrouded-journey-38552.heroku...​']
+const corsOptions = {
+  origin: function (origin, callback) {
+    console.log("** Origin of request " + origin)
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      console.log("Origin acceptable")
+      callback(null, true)
+    } else {
+      console.log("Origin rejected")
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+app.use(cors(corsOptions))
+
+
 app.use('/api/users', userRouter);
 
 app.use('/api/products', productRouter);
