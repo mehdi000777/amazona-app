@@ -34,11 +34,11 @@ app.get('*', (req, res) =>
 );
 
 app.get('/api/config/google', (req, res) => {
-  res.send(process.env.GOOGLE_MAP_KEY || 'AIzaSyAf4gVD_J7jqideD4ThZK5zdMnC-DpJz5g')
+  res.send(process.env.GOOGLE_MAP_KEY || '')
 })
 
 app.get("/api/config/paypal", (req, res) => {
-  res.send(process.env.PAYPAL_CLIENT_ID || "AdMq49U-Bpdn8puNt7j2PvNpbuU7Qk891c6RvKhCqO4ovILYRBNnCPhHoPhfadFKN2csTU9p5SyL3Syb");
+  res.send(process.env.PAYPAL_CLIENT_ID || "sb");
 });
 
 app.use((err, req, res, next) => {
