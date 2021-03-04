@@ -23,9 +23,15 @@ app.use('/api/products', productRouter);
 
 app.use('/api/orders', orderRouter);
 
-app.get("/", (req, res) => {
-    res.send("server is starting")
-});
+app.use(express.static(path.join(__dirname, '/store-app/build')));
+
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/store-app/build/index.html'))
+);
+
+// app.get("/", (req, res) => {
+//     res.send("server is starting")
+// });
 
 app.get('/api/config/google', (req, res) => {
     res.send(process.env.GOOGLE_MAP_KEY || '')
